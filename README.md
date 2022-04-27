@@ -23,7 +23,7 @@ sam build
 sam deploy 
 ```
 
-## Api end point
+## Api endPoints
 At the end of the deployment two API test stage endpoints will be shown, already with query parameters examples for your convenience:<br/>
 1 - HttpApiEntryGateway:  the entry POST call <br/>
 2 - HttpApiExitGateway: the exit POST call <br/>
