@@ -12,6 +12,7 @@ The application uses several AWS resources, including Lambda functions and an AP
 The Serverless Application Model Command Line Interface (SAM CLI) is an extension of the AWS CLI that adds functionality for building and testing Lambda applications. 
 To use the SAM CLI, you need the following tools.
 
+* AWS CLI -  [Install the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 * SAM CLI - [Install the SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 * [Python 3 installed](https://www.python.org/downloads/)
 
@@ -28,8 +29,7 @@ At the end of the deployment two API test stage endpoints will be shown, already
 2 - HttpApiExitGateway: the exit POST call <br/>
 Just copy and paste them when creating a POST request using a API testing application 
 
-### Enjoy!
-
+###Enjoy!
 ## Cleanup
 
 To delete the sample application that you created, use the AWS CLI.
