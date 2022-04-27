@@ -23,12 +23,13 @@ sam deploy
 ```
 
 ## Api end point
-At the end of the deployment there will be two API test stage endpoints shown, already with query parameters examples for your convenience:<br/>
+At the end of the deployment two API test stage endpoints will be shown, already with query parameters examples for your convenience:<br/>
 1 - HttpApiEntryGateway:  the entry POST call <br/>
 2 - HttpApiExitGateway: the exit POST call <br/>
 Just copy and paste them when creating a POST request using a API testing application 
 
-###Enjoy!
+### Enjoy!
+
 ## Cleanup
 
 To delete the sample application that you created, use the AWS CLI.
