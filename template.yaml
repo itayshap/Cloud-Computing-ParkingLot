@@ -15,7 +15,14 @@ Resources:
     Type: AWS::Serverless::HttpApi
     Properties:
       StageName: 'Test'
-
+      Auth:
+        Authorizers:
+          MyExitLambdaAuthorizer:
+            FunctionArn: !GetAtt exitlambda.Arn
+            AuthorizerPayloadFormatVersion: 2.0
+          MyEntryLambdaAuthorizer:
+            FunctionArn: !GetAtt entrylambda.Arn
+            AuthorizerPayloadFormatVersion: 2.0
   exitlambda:
     Type: AWS::Serverless::Function
     Properties:
@@ -55,7 +62,17 @@ Resources:
 
   parkinglots3:
     Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
     Description: Creating Amazon S3 bucket from CloudFormation
     Properties:
       BucketName: parkinglots3
+
+Outputs:
+  HttpApiEntryGateway:
+    Description: 'API Gateway endpoint URLs for Test stage for the Entry Lambda function'
+    Value: !Sub 'https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com/Test/entry?plate=134-213-121&parkingLot=33'
+  HttpApiExitGateway:
+    Description: 'API Gateway endpoint URLs for Test stage for the Exit Lambda function'
+    Value: !Sub 'https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com/Test/exit?ticketId=0'
+
 

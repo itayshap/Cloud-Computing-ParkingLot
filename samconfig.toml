@@ -14,9 +14,9 @@ image_repositories = []
 [default]
 [default.deploy]
 [default.deploy.parameters]
-stack_name = "sam-app"
-s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-cm3j3yvydhp0"
-s3_prefix = "sam-app"
+stack_name = "parkingLot-app"
+s3_bucket = "aws-sam-deploy-bucket"
+s3_prefix = "parkingLot-app"
 region = "us-east-1"
 capabilities = "CAPABILITY_IAM"
 image_repositories = []
