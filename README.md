@@ -36,6 +36,7 @@ Just copy and paste them when creating a POST request using a API testing applic
 
 To delete the sample application that you created, use the AWS CLI.
 ```bash
+aws s3 rm s3://parkinglots3 --recursive
 sam delete --no-prompts
 aws s3 rb s3://s3bucket-for-parking-lot-deploy --force
 ```
