@@ -1,5 +1,6 @@
 # Parking_Lot app
 
+
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
 - parking_lot - Code for the application's Lambda function.
@@ -19,20 +20,22 @@ To use the SAM CLI, you need the following tools.
 To build and deploy your application for the first time, run the following in your shell:
 
 ```bash
+aws s3 mb s3://s3bucket-for-parking-lot-deploy
 sam build 
 sam deploy 
 ```
 
-## Api EndPoints
+## API EndPoints
 At the end of the deployment two API test stage endpoints will be shown, already with query parameters examples for your convenience:<br/>
-1 - HttpApiEntryGateway:  the entry POST call <br/>
-2 - HttpApiExitGateway: the exit POST call <br/>
+1 - HttpApiEntryGateway:  the entry POST request <br/>
+2 - HttpApiExitGateway: the exit POST request <br/>
 Just copy and paste them when creating a POST request using a API testing application 
 
-### Enjoy! 
+###Enjoy!
 ## Cleanup
 
 To delete the sample application that you created, use the AWS CLI.
 ```bash
-aws cloudformation delete-stack --stack-name parkingLot-app
+sam delete
+aws s3 rb s3://s3bucket-for-parking-lot-deploy --force
 ```
