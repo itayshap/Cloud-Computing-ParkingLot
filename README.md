@@ -34,7 +34,13 @@ Just copy and paste them when creating a POST request using a API testing applic
 ### Enjoy!
 ## Cleanup
 
-To delete the sample application that you created, use the AWS CLI.
+To delete the sample application that you created, use the following python script.
+
+```bash
+python clean_up.py
+```
+
+Or use the AWS CLI.
 ```bash
 aws s3 rm s3://parkinglots3 --recursive
 sam delete --no-prompts
