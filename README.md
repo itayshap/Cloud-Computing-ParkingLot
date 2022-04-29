@@ -17,10 +17,10 @@ To use the SAM CLI, you need the following tools.
 * SAM CLI - [Install the SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 * [Python 3 installed](https://www.python.org/downloads/)
 
-To build and deploy your application, run the following python script in your shell:
+To build and deploy your application, run the following shell script in your shell:
 
 ```bash
-python run.py
+python run.bat
 ```
 Or use the following SAM CLI commands:
 ```bash
@@ -38,10 +38,10 @@ Just copy and paste them when creating a POST request using a API testing applic
 ### Enjoy!
 ## Cleanup
 
-To delete the sample application that you created, use the following python script.
+To delete the sample application that you created, use the following shell script.
 
 ```bash
-python clean_up.py
+python clean_up.bat
 ```
 
 Or use the AWS CLI.
